@@ -148,6 +148,12 @@ main {
 	gap: 1.5rem;
 }
 
+@media (min-width: 1024px) {
+	.card-grid {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
 .card {
 	background-color: var(--bg-card);
 	border-radius: 16px;
