@@ -1,3 +1,9 @@
+/* Footer exit row: text and button side by side */
+.footer-exit-row {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
 :root {
 	--bg-main: #5a5449;
 	--bg-card: #c4b79d;
@@ -22,7 +28,7 @@ body {
 	background-color: var(--bg-main);
 	color: var(--text-dark);
 	line-height: 1.6;
-	padding-bottom: 60px; /* Space for footer */
+	padding-bottom: 20px; /* Space for footer */
 }
 
 a {
@@ -223,13 +229,13 @@ footer {
 	align-items: center;
 	padding: 0.75rem 1rem;
 	font-weight: 500;
-	font-size: 0.9rem;
+	font-size: 1.5rem;
 }
 
 .footer-exit {
-	display: none;
+	/* display: none; */ 
 	position: static;
-	transform: scale(0.8);
+	transform: scale(0.6);
 	background-color: var(--bg-exit);
 }
 
