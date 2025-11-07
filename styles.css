@@ -265,6 +265,7 @@ footer {
 	.card-grid {
 		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 		gap: 1rem;
+		margin-bottom: 2.5rem; /* Add space below cards above footer */
 	}
     
 	.card {
@@ -301,8 +302,5 @@ footer {
 	.card-grid {
 		grid-template-columns: 1fr 1fr;
 	}
-    
-	footer span:nth-child(3) { /* Show only the first message and phone number on very small screens */
-		display: none;
-	}
+	/* Remove hiding of phone number in footer */
 }

@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+	const ESCKey = false; /* Guardrail when testing - delete before production */ 
+
     // --- Fast Exit Functionality ---
     const fastExitButtons = document.querySelectorAll('.fast-exit');
 
     function performFastExit(event) {
-        event.preventDefault(); // Prevent default link behavior if it's an anchor
-        // Redirect to a neutral, common website
-        window.location.href = 'https://www.google.com';
+    event.preventDefault(); // Prevent default link behavior if it's an anchor
+    // Redirect to a neutral, common website and prevent back navigation
+    location.replace('https://www.google.com');
     }
 
     fastExitButtons.forEach(button => {
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Fast Exit on ESC key ---
     document.addEventListener('keydown', (event) => {
+		if (!ESCKey) return;
         if (event.key === 'Escape') {
             performFastExit(event);
         }
